@@ -17,7 +17,7 @@ class Cook extends Component {
     render(){
         return(            
                 <div class="container">
-                <nav class="navbar navbar-light bg-light">
+                <nav class="navbar ">
                      <button type="button" class="btn">Back</button>
                      <h1>Orders List</h1>
                      <p></p>
