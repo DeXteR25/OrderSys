@@ -18,20 +18,20 @@ class Cook extends Component {
         return(            
                 <div class="container">
                 <nav class="navbar ">
-                     <button type="button" class="btn">Back</button>
+                     <p></p>
                      <h1>Orders List</h1>
                      <p></p>
                 </nav>
                     <div class="row">
-                        <div class="col-md-12 col-lg-6">
+                        <div class="col-md-6 col-lg-3 ">
                             <br></br>
+                            <div class="card1">
                              <h4>Table 1</h4>
-                                <div class="card">
                                 <table class="table table-bordered">
                                     <thead class="thead-light">
                                     <tr>
                                         <th>SN</th>
-                                        <th>Food Name</th>
+                                        <th>Name</th>
                                         <th>Quantity</th>
                                     </tr>
                                     </thead>
@@ -45,35 +45,37 @@ class Cook extends Component {
                                     
                                     </tbody>
                                  </table>
-                                 <button type="button" class="btn btn-success">Done</button>
+                                 
+                            <button type="button" class="btn btn-success">Done</button>
                             </div>
                         </div>
-                        <div class="col-md-12 col-lg-6">
-                        <br></br>
+                        <div class="col-md-6 col-lg-3 ">
+                            <br></br>
+                            <div class="card1">
                              <h4>Table 1</h4>
-                                <div class="card">
                                 <table class="table table-bordered">
                                     <thead class="thead-light">
                                     <tr>
                                         <th>SN</th>
-                                        <th>Food Name</th>
+                                        <th>Name</th>
                                         <th>Quantity</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                    <td>{listNum}</td>
+                                        <td>{listNum}</td>
                                         <td>{listFood}</td>
                                         <td>{listQuantity}</td>
                                     </tr>
-                                 
+                                   
                                     
                                     </tbody>
                                  </table>
-                                 <button type="button" class="btn btn-success">Done</button>
+                                 
+                                <button type="button" class="btn btn-success">Done</button>
                             </div>
                         </div>
-                    </div>
+                       </div>
                            
                 </div> 
            
