@@ -11,7 +11,7 @@ const quantity= [4,3];
             );
             const listQuantity= quantity.map((quantity) =>
             <tr>{quantity}</tr>
-            );           
+            );
         
 class Cook extends Component {
     render(){
@@ -74,7 +74,7 @@ class Cook extends Component {
                             </div>
                         </div>
                     </div>
-                         
+                           
                 </div> 
            
         );
