@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Menu.css';
-
+import { Link } from 'react-router-dom';
 
 class Menu extends Component {
     render(){
@@ -10,7 +10,7 @@ class Menu extends Component {
             
                 <div className="container">
                     <nav className="navbar navbar-light bg-light">
-                        <button type="button" className="btn">Back</button>
+                    <Link className=" btn" to="/Home" >Back</Link>
                         <h1>Orders List</h1>
                         <p></p>
                     </nav>
@@ -37,10 +37,11 @@ class Menu extends Component {
                     </div>
                          
                 </div> 
+                
            
         );
     }
 }
 
-export default Menu 
+export default Menu;
 
