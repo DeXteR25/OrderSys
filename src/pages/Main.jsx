@@ -20,7 +20,7 @@ class Cook extends Component {
                               
                             </div>
                             <div class="col-md-12 col-lg-12 align-self-center">
-                                 <button type="button" class="btn main">Waiter</button>
+                            <Link to ="/Home"><button type="button" class="btn main">Waiter</button></Link>
                             </div>
                         </div>
                     </div>
