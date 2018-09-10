@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
            <Router>
             <div>
-              <Route exact path="/" component={Cook}/>
+              <Route exact path="/Cook" component={Cook}/>
               <Route exact path="/Main" component={Main}/>
             </div>
           </Router>       

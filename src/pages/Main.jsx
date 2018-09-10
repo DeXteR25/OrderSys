@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './Main.css';
-import { BrowserRouter as  Link, Route } from "react-router-dom";
+import { Link} from "react-router-dom";
         
+
+
 class Cook extends Component {
     render(){
         return(            
@@ -13,17 +15,16 @@ class Cook extends Component {
                     </nav>
                         <div class ="row">
                             <div class="col-md-12 col-lg-12 align-self-center">
-                                 <Link to="/">
-                                 <button type="button" class="btn main">Cook</button>
-                                 </Link>
-                                 <Route exact path="/" component={Cook} />
+                                 
+                            <Link to ="/Cook"><button type="button" class="btn main">Cook</button></Link>
+                              
                             </div>
                             <div class="col-md-12 col-lg-12 align-self-center">
-                                 <button type="button" class="btn main">Waiter</button>
+                            <Link to ="/Home"><button type="button" class="btn main">Waiter</button></Link>
                             </div>
                         </div>
                     </div>
-                          
+                     
            
            
         );
