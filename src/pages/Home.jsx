@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './Home.css';
-import Menu from './Menu.jsx';
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
+
     render () {
         return (
            
@@ -12,29 +12,29 @@ class Home extends Component {
                         <h1 className='font'>TABLE</h1>
 
                                 <div className="d-flex justify-content-center">
-                                    
-                                         <Link className="p-2 btn btn-primary btn-lg" to={'/Menu'} component={Menu}>Table1</Link>
-                                    
-                                    <div className="p-2"><a className="btn btn-primary btn-lg" href="" role="button">Table2</a></div>
-                                    <div className="p-2"><a className="btn btn-primary btn-lg" href="" role="button">Table3</a></div>
-                                    
-                                   
-                                </div>
                                 
-                                <div className="d-flex justify-content-center">
-                                    <div className="p-2"><a className="btn btn-primary btn-lg" href="" role="button">Table4</a></div>
-                                    <div className="p-2"><a className="btn btn-primary btn-lg" href="" role="button">Table5</a></div>
-                                    <div className="p-2"><a className="btn btn-primary btn-lg" href="" role="button">Table6</a></div>
-                                    
+                                         <Link className="p-2 btn btn-primary btn-lg" to={"/Menu"}>Table1</Link>
+                                         <Link className="p-2 btn btn-primary btn-lg" to={"/Menu"}>Table2</Link>
+                                         <Link className="p-2 btn btn-primary btn-lg" to={"/Menu"}>Table3</Link>
                                 </div>
 
-                                 <div className="d-flex justify-content-center">
-                                    <div className="p-2"><a className="btn btn-primary btn-lg" href="" role="button">Table7</a></div>
-                                    <div className="p-2"><a className="btn btn-primary btn-lg" href="" role="button">Table8</a></div>
-                                    <div className="p-2"><a className="btn btn-primary btn-lg" href="" role="button">Table</a></div>
-                                    
+                                <div className="d-flex justify-content-center">
+                                
+                                <Link className="p-2 btn btn-primary btn-lg" to={"/Menu"}>Table4</Link>
+                                <Link className="p-2 btn btn-primary btn-lg" to={"/Menu"}>Table5</Link>
+                                <Link className="p-2 btn btn-primary btn-lg" to={"/Menu"}>Table6</Link>
+
                                 </div>
-            
+
+                                <div className="d-flex justify-content-center">
+                                
+                                <Link className="p-2 btn btn-primary btn-lg" to={"/Menu"}>Table7</Link>
+                                <Link className="p-2 btn btn-primary btn-lg" to={"/Menu"}>Table8</Link>
+                                <Link className="p-2 btn btn-primary btn-lg" to={"/Menu"}>Table9</Link>
+
+                                </div>
+                      
+                                        
                     </div>
                   
                    

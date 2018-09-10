@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Menu.css';
 import { Link } from 'react-router-dom';
-
+import { BrowserRouter as Router , Route } from 'react-router-dom';
 class Menu extends Component {
     render(){
       
@@ -14,6 +14,11 @@ class Menu extends Component {
                         <h1>Orders List</h1>
                         <p></p>
                     </nav>
+                    <Router>
+                    <div>
+                    <Route  path= "/" render={ () => { return ("Hello");}}/>
+                    </div>
+                    </Router>
                     <div className="row">
                                 <div className="container panelBody">
                                         <input type="text" id="inputData" className="inputCss form-control" />
