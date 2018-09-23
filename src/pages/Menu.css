@@ -10,3 +10,8 @@
     
     box-shadow: 0 0 10px #F4E552 !important;
 }
+.orderView{
+    height: 200px;
+    width: 100%;
+   background-color: white;
+}
