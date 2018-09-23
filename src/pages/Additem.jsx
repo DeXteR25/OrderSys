@@ -11,7 +11,17 @@ class App extends Component {
     };
   }
 
-  
+  onClickButton1 = () => {
+    this.setState({
+      text: 'clicked 1'
+    });
+  }
+
+  onClickButton2 = () => {
+    this.setState({
+      text: 'clicked 2'
+    });
+  }
 
   addItem(e){
     e.preventDefault();
@@ -53,6 +63,17 @@ class App extends Component {
          </div>
          <button type="submit" className="btn btn-primary">Add</button>
        </form>
+
+       <div>
+        <button onClick={this.onClickButton1}>
+          Button 1
+        </button>
+        <button onClick={this.onClickButton2}>
+          Button 2
+        </button>
+        <h1>{this.state.text}</h1>
+      </div>
+
        {
          message !== '' && <p className="message text-danger">{message}</p>
        }
