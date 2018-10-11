@@ -4,54 +4,62 @@ import React, { Component } from 'react';
 class App extends Component {
    constructor(props) {
     super(props);
-
-    this.state = {
-      buyItems: ["milk", "bread", "fruit"],
-      message: ""
+ this.state = {
+      // array lai list ma change garda qty ko use garna milxa
+      buyItems: [{ name: "momo", qty: 1 }, { name: "chowmin", qty: 1 }],
     };
   }
 
-  
-// add order name in the list array 
-  addItem(item) {
+  addItem(item,) {
     const { buyItems } = this.state;
     const newItem = item;
-    const isOnTheList = buyItems.includes(newItem);
+     //list ma array jasari include rakhna namilne vayera some use gareko xa
+     // some le pani include jastai list ma same value xa vane TRUE return garxa
+    const isOnTheList = buyItems.some(e => e.name == newItem);
+
     if (isOnTheList) {
+      //pahile ko element haru addBuyItems ma sareko  
+      const addBuyItems = this.state.buyItems;
+     // jun repeated element xa tyo matrai changeItem ma sareko 
+      const changeItem = this.state.buyItems.filter(buyItems => {
+        return buyItems.name === item;
+        //yesko value [o:object-name="coke",qty=1] hunxa
+        //yesko return jahile pani 1 matrai hunxa cus filter bata same value eutai matrai niskinxa
+      });
+      changeItem[0].qty++; // always [0] cus yesko object 0 position ma matrai hunxa 
+                           // ++ le 1 le increase garxa
+      
       this.setState({
-        message: "This item is already on the list."
+        // [...] le sabai change vayeko addBuyItems haru buyItems ma update garxa
+        buyItems: [...addBuyItems]
       });
     } else {
       newItem !== "" &&
         this.setState({
-          buyItems: [...this.state.buyItems, newItem],
+          buyItems: [...this.state.buyItems, { name: item, qty: 1 }],
           message: ""
         });
     }
 
-    // this.addForm.reset();
   }
 
-// remove order name from the list array 
   removeItem(item) {
     const newBuyItems = this.state.buyItems.filter(buyItems => {
-      return buyItems !== item;
+      return buyItems.name !== item; // [!==] le tyo bata nabayeko sabai filter vayera baki rahanxa 
     });
     this.setState({
       buyItems: [...newBuyItems]
     });
   }
-
-
   render() {
     const { buyItems, message } = this.state;
     return (
       <div className="container">
-        <button type="button" onClick={e => this.addItem("momo")}>
-          Momo
+        <button type="button" onClick={e => this.addItem("coke")}>
+          Coke
         </button>
-        <button type="button" onClick={e => this.addItem("chowmin")}>
-          Chowmin
+        <button type="button" onClick={e => this.addItem("Tea")}>
+          Tea
         </button>
 
         <div>
@@ -65,18 +73,20 @@ class App extends Component {
               <tr>
                 <th>#</th>
                 <th>Item</th>
+                <th>Qty</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
               {buyItems.map(item => {
                 return (
-                  <tr key={item}>
-                    <th scope="row">1</th>
-                    <td>{item}</td>
+                  <tr key={buyItems.indexOf(item)}>
+                    <th scope="row">{buyItems.indexOf(item) + 1}</th>
+                    <td>{item.name}</td>
+                    <td>{item.qty}</td>
                     <td className="text-middle">
                       <button
-                        onClick={e => this.removeItem(item)}
+                        onClick={e => this.removeItem(item.name)}
                         type="button"
                         className="btn btn-default btn-sm"
                       >
@@ -92,6 +102,9 @@ class App extends Component {
       </div>
     );
   }
+
+   
+
 }
 
 export default App;
